@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:paddingBottom="10dp"
+                                             android:background="#e2e2e2"
+                                             android:layout_height="match_parent">
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/img_receive"
+               android:src="@android:drawable/ic_menu_upload"
+               android:layout_marginEnd="10dp"
+               android:padding="5dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/rv_chat_list"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/et_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_receive"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_nav_down"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:background="@color/colorAccent"
+            android:src="@android:drawable/stat_sys_download_done"
+            app:layout_constraintEnd_toEndOf="@id/rv_chat_list"
+            app:layout_constraintBottom_toBottomOf="@+id/rv_chat_list"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_input"
+            android:background="@drawable/et_bg"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:layout_margin="5dp"
+            android:hint="Type a message"
+            android:textSize="16sp"
+            android:fontFamily="@font/opensansregular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_send"/>
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/img_send"
+               android:layout_marginEnd="5dp"
+               android:padding="5dp"
+               android:src="@android:drawable/ic_menu_send"
+               app:layout_constraintTop_toTopOf="@+id/et_input"
+               app:layout_constraintBottom_toBottomOf="@+id/et_input"
+               app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
